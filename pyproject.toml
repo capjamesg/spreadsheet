@@ -1,0 +1,15 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[project]
+name = "spreadsheet"
+version = "0.1.0"
+dependencies = ["lark", "tabulate", "toposort"]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[tool.pytest.ini_options]
+python_files = ["test.py", "test_*.py"]
+pythonpath = "."
